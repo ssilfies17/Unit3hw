@@ -13,7 +13,10 @@ function writePassword() {
     numbers: "0123456789",
     symbols: "!#$%&()*+,-./:;<=>?@[]^_`{|}~", 
   }
-  var password = generatePassword();
+  var password = function generatePassword () {
+    passwordText.append(computerSelectionAll)
+  }
+
   var passwordText = document.querySelector("#password");
   
 
@@ -24,8 +27,7 @@ function writePassword() {
   var computerSelectionSym = choices.symbols[Math.floor(Math.random() * choices.symbols.length)];
 
   if ((userLength <= 128 && userLength >= 8) && (userCharChoice == "LUNS")) {
-    alert(computerSelectionAll);
-    append(password, passwordText);
+    password();
   }
   
   
